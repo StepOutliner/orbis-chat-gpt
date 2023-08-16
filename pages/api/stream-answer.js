@@ -30,7 +30,7 @@ export default async function handler(req, res) {
       headers: {
         "Content-Type": "application/json",
         'Authorization': "Bearer " + process.env.OPEN_AI_KEY,
-        'OpenAI-Organization': 'org-WbmUqbZDRruhWmTtqo3ToWPO'
+        'OpenAI-Organization': 'org-tfdp6gGqEuJBogChrBgne2ZQ'
       },
       onopen(res) {
         console.log("opening request.");

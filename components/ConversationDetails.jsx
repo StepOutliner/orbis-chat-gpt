@@ -182,7 +182,7 @@ export default function ConversationDetails({selectedConv, setSelectedConv, conv
         headers: {
           "Content-Type": "application/json",
           'Authorization': "Bearer " + process.env.NEXT_PUBLIC_OPEN_AI_KEY,
-          'OpenAI-Organization': 'org-lxESgWKgBRJuQgfwrozZGFsa'
+          'OpenAI-Organization': 'org-tfdp6gGqEuJBogChrBgne2ZQ'
         },
       onopen(res) {
         if (res.ok && res.status === 200) {
