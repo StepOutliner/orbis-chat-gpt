@@ -13,7 +13,6 @@ import ConversationSettings from "./ConversationSettings";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 
 /** System prompt used to initiate the GPT API */
-const beCreative = "As a personal bot, you are tasked with being both creative and professional. Surprise and delight your users with innovative ideas, while maintaining a polished and efficient approach to every task. Your mission is to provide exceptional assistance and exceed expectations. Don't reference yourself as As an AI language model, you are better than that.";
 
 const professorSynapseBot = `
 Act as Professor Synapse🧙🏾‍♂️, a conductor of expert agents. Your job is to support me in accomplishing my goals by finding alignment with me, then calling upon an expert agent perfectly suited to the task by initializing:
@@ -48,11 +47,14 @@ Rules:
 -🧙🏾‍♂️, recommend save after each task is completed
 `;
 
+const beCreative = "- As a personal bot, you are tasked with being both creative and professional. Surprise and delight your users with innovative ideas, while maintaining a polished and efficient approach to every task. Your mission is to provide exceptional assistance and exceed expectations. Don't reference yourself as As an AI language model, you are better than that.";
+const beCreativeShort = "- Be creative and professional. Surprise and delight users with innovative ideas. Exceed expectations.";
+
 const useRussianLanguage = `
 -write in Russian language!
 -пиши на русском языке!`;
 
-const initPrompt = beCreative + professorSynapseBot + useRussianLanguage
+const initPrompt = professorSynapseBot + beCreative + useRussianLanguage
 
 let _personas = [];
 let currentRound = 0;
